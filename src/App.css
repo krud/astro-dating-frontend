@@ -1,38 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Codystar|Fredericka+the+Great|Geostar|Poiret+One|Poppins|Cabin|Galada|Sigmar+One&display=swap');
+
+body{
+  /* background-image: url('https://images.unsplash.com/photo-1579212989908-d42abc080b33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80'); */
+  background-image: url(https://media.giphy.com/media/SdkOtPG8ZfmhO/giphy.gif);
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-color: black;
+}
+
 .App {
   text-align: center;
+  width: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+  text-align: center;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 3rem;
+  color: whitesmoke;
+}
+
+h1{
+  color: whitesmoke;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 40px;
+}
+
+button{
+  color: whitesmoke;
+  background-color: inherit;
+  padding: .5rem 1rem;
+  margin: 1rem;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: rgba(64, 147, 161, 0.4);
+  box-shadow: 0px 15px 20px black;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+main{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+form{
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input{
+  margin: .5rem;
+  padding: .5rem;
+  font-family: 'Poppins', sans-serif;
 }
+
+.button{
+  color: whitesmoke;
+  background-color: inherit;
+  padding: .5rem 1rem;
+  margin: 1rem;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+section{
+  margin: 1rem;
+  background-color: blue;
+}
+
+h2{
+  font-size: 32px;
+  color:whitesmoke;
+  font-family: 'Galada', cursive;
+}
+
+.horoscope-card{
+  width: 40rem;
+  height: 20rem;
+  box-shadow: 0px 8px 15px rgba(250, 248, 248, 0.596);
+  padding: 3rem;
+}
+
+.horoscope-section{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.user-details{
+  align-self: center;
+  justify-self: center;
+  padding-bottom: 1rem;
+}
+
+h3{
+  font-family: 'Sigmar One', cursive;
+  padding-left: 1rem;
+  font-size: 52px;
+  color:rgb(129, 115, 115);
+}
+ul{
+  list-style-type: disc;
+  padding-left: 3rem;
+}
+
+li{
+  color: whitesmoke;
+  font-family: 'Cabin', sans-serif;
+  font-size: 22px;
+  padding: 1rem;
+}
+
+h5{
+  padding-left: 1rem;
+  color: whitesmoke;
+  font-family: 'Cabin', sans-serif;
+  font-size: 32px;
+}
+/* font-family: 'Codystar', cursive;
+font-family: 'Geostar', cursive;
+font-family: 'Sigmar One', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Fredericka the Great', cursive; */

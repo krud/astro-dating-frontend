@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react'
+import './Reset.css';
 import './App.css';
+import MainContainer from './components/MainContainer'
+import Header from './components/Header'
+import UserPage from './components/UserPage'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    horoscopes: [],
+    user:{},
+    userShowing: false
+  }
+
+  addUser = (name, sunsign) => {
+    this.setState({
+      user: {
+        name,
+        sunsign
+      },
+      userShowing:true 
+    })
+  }
+
+  componentDidMount(){
+    fetch('http://localhost:3000/horoscopes')
+    .then(response => response.json())
+    .then(result => {
+      this.setState({
+        horoscopes: result
+      })
+
+    })
+  }
+
+  render() {
+    return (
+      <div>
+       <Header />
+       { this.state.userShowing
+          ? <UserPage horoscopes={this.state.horoscopes} user={this.state.user}/>
+          : <MainContainer addUser={this.addUser}/>
+       }
+      </div>
+    )
+  }
 }
-
-export default App;
